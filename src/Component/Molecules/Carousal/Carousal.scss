@@ -1,0 +1,75 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    margin: 0;
+  }
+  
+  .carousel-slide {
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills space while cropping */
+    display: block;
+    border-radius: 0;
+    object-position: 0 40%;
+
+    @media (max-width: 660px){
+      object-position: 45% 0%;
+    }
+  }
+  
+  .caption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .nav {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-size: 2rem;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .nav:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .prev {
+    position: absolute;
+    left: 10px;
+  }
+  
+  .next {
+    position: absolute;
+    right: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .carousel { 
+        max-width: 40vh;
+    }
+    .caption {
+      font-size: 0.9rem;
+    }
+  
+    .nav {
+      font-size: 1.5rem;
+      padding: 8px;
+    }
+  }
+  

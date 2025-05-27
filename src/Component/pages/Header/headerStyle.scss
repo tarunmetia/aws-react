@@ -10,6 +10,29 @@
   
     h1 {
       margin: 0;
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      font-weight: normal;
+      background: linear-gradient(to right, #9be2fe, #67d1fb); /* soft blue gradient */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #004466;
+      text-shadow: 0 0 8px rgba(103, 209, 251, 0.4), 0 0 12px rgba(155, 226, 254, 0.6);
+      position: relative;
+
+      // &::after {
+      //   content: "ॐ";
+      //   position: absolute;
+      //   top: -15px;
+      //   left: 50%;
+      //   font-size: 3rem;
+      //   color: #67d1fb;
+      //   text-shadow: 0 0 1px red;
+      // }
+
+      @media (max-width: 660px) {
+        font-size: 2rem;        
+      }
     }
   
     nav {
@@ -22,6 +45,11 @@
           text-decoration: underline;
         }
       }
+    }
+
+    @media (max-width: 660px) {
+      flex-direction: column;
+      align-items: center;  
     }
   }
   

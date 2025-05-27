@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div>
       <header className='header-nav-wrapper'>
-        <h1>My Website</h1>
+        <h1>Durga puja online</h1>
         <nav>
             <a href="/">Home</a>
             <a href="/about">About</a>
