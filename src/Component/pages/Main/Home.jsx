@@ -25,8 +25,10 @@ const Home = () => {
   return (
     <div>
       <Carousal slides={slides}/>
-      <Headings headingLevel="h1" headingText="Bachhri Football Math Durga Puja Samiti" headingStyle="main-heading" />
-      <Cards />
+      <div className='main-content-wrapper'>
+        <Headings headingLevel="h1" headingText="Bachhri Football Math Durga Puja Samiti" headingStyle="main-heading" />
+        <Cards />
+      </div>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './headerStyle.scss'
 
 const Header = () => {
@@ -7,9 +8,9 @@ const Header = () => {
       <header className='header-nav-wrapper'>
         <h1>Durga puja online</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+          <Link to="/">Home</Link> |{" "}
+          <Link to="/about">About</Link> |{" "}
+          <Link to="/contact">Contact</Link>
         </nav>
         </header>
     </div>
