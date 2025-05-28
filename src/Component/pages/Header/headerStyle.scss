@@ -1,55 +1,80 @@
 @import '../../../Style/commonStyle.scss';
-
 .header-nav-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end; // Align h1 and nav to bottom
-    padding: 20px;
-    border-bottom: 1px solid $blue-light;
-    background-color: #f9f9f9;
-  
-    h1 {
-      margin: 0;
-      font-family: 'Great Vibes', cursive;
-      font-size: 4rem;
-      font-weight: normal;
-      background: linear-gradient(to right, #9be2fe, #67d1fb); /* soft blue gradient */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 1px #004466;
-      text-shadow: 0 0 8px rgba(103, 209, 251, 0.4), 0 0 12px rgba(155, 226, 254, 0.6);
-      position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 40px;
+  border-bottom: 1px solid $blue-light;
+  background-color: #f9f9f9;
+  flex-wrap: wrap;
 
-      // &::after {
-      //   content: "ॐ";
-      //   position: absolute;
-      //   top: -15px;
-      //   left: 50%;
-      //   font-size: 3rem;
-      //   color: #67d1fb;
-      //   text-shadow: 0 0 1px red;
-      // }
+  h1 {
+    margin: 0;
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    font-weight: normal;
+    background: linear-gradient(to right, #9be2fe, #67d1fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #004466;
+    text-shadow: 0 0 8px rgba(103, 209, 251, 0.4), 0 0 12px rgba(155, 226, 254, 0.6);
 
-      @media (max-width: 660px) {
-        font-size: 2rem;        
-      }
-    }
-  
-    nav {
-      a {
-        margin-left: 20px;
-        text-decoration: none;
-        color: #333;
-  
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 10px;
     }
 
-    @media (max-width: 660px) {
-      flex-direction: column;
-      align-items: center;  
+    @media (max-width: 480px) {
+      font-size: 2rem;
     }
   }
-  
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+
+    a {
+      text-decoration: none;
+      color: $blue-deep;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        text-decoration: underline;
+        color: $brown-deep;
+      }
+    }
+
+    // Tablet styles
+    @media (max-width: 768px) {
+      gap: 0.75rem;
+      a {
+        font-size: 1rem;
+      }
+    }
+
+    // Mobile: display 2 items per row
+    @media (max-width: 480px) {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      gap: 0.5rem;
+
+      a {
+        font-size: 0.95rem;
+        justify-self: center;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+}

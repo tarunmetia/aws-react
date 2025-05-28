@@ -1,6 +1,6 @@
 import './App.scss';
 import Header from './Component/pages/Header/header'
-import Home from './Component/pages/Main/Home'
+import Footer from './Component/pages/Footer/Footer'
 import AppRoutes from './Routes/index'
 import { BrowserRouter as Router } from 'react-router-dom';
 function App() {
@@ -8,7 +8,8 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <AppRoutes />
+          <AppRoutes />
+        <Footer/>
       </Router>
     </div>
   );

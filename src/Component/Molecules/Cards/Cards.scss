@@ -1,3 +1,4 @@
+@import '../../../Style/commonStyle.scss';
 .card-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -9,6 +10,7 @@
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex: 0 1 calc(33.33% - 20px);  
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   
     &:hover {
       transform: translateY(-5px);
@@ -25,12 +27,13 @@
       font-size: 1.25rem;
       margin-bottom: 10px;
       font-weight: 600;
-      color: #333;
+      color: $blue-deep;
     }
   
     .card-description {
       font-size: 1rem;
-      color: #666;
+      padding: 0 10px;
+      color: $grey-deep;
     }
 
     @media (max-width: 660px) {
